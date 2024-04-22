@@ -1,3 +1,4 @@
+import React from "react";
 import mockData from "./constants/mock.json";
 
 function Product({ data }) {
@@ -14,7 +15,6 @@ function Product({ data }) {
       <h1>{data.baseSpecification.graphicProcessor}</h1>
       <h1>{data.baseSpecification.momory}</h1>
       <h1>{data.baseSpecification.storageCapacity}</h1>
-
       <p>{data.modelColorName}</p>
       <p>{data.features.neural_engine}</p>
       <p>{data.features.display}</p>
@@ -29,17 +29,19 @@ function Product({ data }) {
   );
 }
 
+function ChooseYourNewMacBookAir() {
+  return (
+    <div>
+      <h1>Choose your new MacBook Air</h1>
+    </div>
+  );
+}
+
 function App() {
   return (
-    <div
-      style={{
-        display: "flex",
-      }}
-    >
-      {mockData.map((item) => (
-        <Product data={item} />
-      ))}
-    </div>
+    <React.Fragment>
+      <ChooseYourNewMacBookAir />
+    </React.Fragment>
   );
 }
 
